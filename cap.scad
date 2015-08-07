@@ -9,7 +9,7 @@ difference(){
 
 	// center hole
 	translate([0,0,-1]){
-		cylinder(r=cap_diameter/10, h=cap_thickness+2,$fn=(cap_diameter*10)/10);
+		cylinder(r=cap_diameter/9, h=cap_thickness+2,$fn=(cap_diameter*10)/10);
 	}
 
 	// keyhole
