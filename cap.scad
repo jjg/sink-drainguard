@@ -1,5 +1,6 @@
 cap_diameter = 31.58;
 cap_thickness = 2.54;
+drain_hole_diameter = 4;
 
 difference(){
 
@@ -16,11 +17,11 @@ difference(){
 		cube([cap_diameter/2,cap_diameter/8,cap_thickness+2]);
 	}
 
-	// inner ring of holes
+	// ring of holes
 	for(i=[0:10]){
 		rotate(i*360/10, [0,0,1]){
 			translate([11,0,-1]){
-					cylinder(r=2,h=cap_thickness+2,$fn=15);
+					cylinder(r=drain_hole_diameter/2,h=cap_thickness+2,$fn=15);
 			}
 		}
 	}
