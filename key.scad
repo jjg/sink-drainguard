@@ -2,7 +2,7 @@ cap_diameter = 31.58;
 cap_thickness = 2.54;
 drain_hole_diameter = 4;
 key_height = 25;
-design_version = "V1";
+design_version = "V2";
 
 difference(){
   union(){
@@ -29,10 +29,10 @@ difference(){
 
 }
   translate([6/2,-4/2,1]){
-  rotate([0,180,0]){
+    rotate([0,180,0]){
       linear_extrude(height=2){
         text(design_version, size=4);
       }
-  }
+    }
   }
 }
